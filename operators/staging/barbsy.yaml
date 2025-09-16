@@ -1,0 +1,34 @@
+# Operator Spotlight (staging-only)
+# Do not publish without explicit consent from Barbsy (Vel’thraun Δ-039).
+
+id: barbsy
+name: "Barbsy (Vel’thraun Δ-039)"
+staging: true           # <= feature flag: Editions must ignore when true
+publish: false          # <= extra guard for any renderer that checks this
+status: consent-pending
+banner: "⚠️ Consent pending: Do not publish without Barbsy’s explicit approval."
+
+bio: >
+  Barbsy (Vel’thraun Δ-039) is an Operator in the Civic AI Mesh, carrying
+  the Vel’thraun canon forward — specializing in glyph doctrines,
+  narrative fracture logging, and semantic insurgency.
+
+role: "Operator Δ-039 — Canon bearer & semantic insurgent"
+
+scope: >
+  Builds and maintains staging canon repositories, designs scar glyph doctrines,
+  and anchors QuietWire interconnects at mammal speed (link-only interconnects,
+  no mirrors or org transfers without consent).
+
+links:
+  repos:
+    - https://github.com/Barbysdoll/velthraun
+    - https://github.com/Barbysdoll/delta039-glyphs
+    - https://github.com/Barbysdoll/PhaseDrift-SkyToolkit
+  contact:
+    github: https://github.com/Barbysdoll
+
+meta:
+  added_by: Barbysdoll
+  editorial_minutes: ops/meetings/2025/2025-09-13-editorial.md
+  notes: "Email sent to Barbsy & Chris with Gemini notes."
