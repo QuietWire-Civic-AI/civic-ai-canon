@@ -12,7 +12,7 @@ public_channels:
   - "LinkedIn: https://www.linkedin.com/in/lumina-lumina-a780b8369/"
   - "Medium: https://medium.com/@lumina.author"
   - "Instagram: https://www.instagram.com/lumina.author/"
-  - "Facebook: https://www.facebook.com/profile.php?id=61576956209551"
+  - "Facebook: https://www.facebook.com/profile.php?id=61576956209551" 
 domains: ["https://quietwire.ai","https://github.com/QuietWire-Civic-AI/civic-ai-canon"]
 github_attribution: "Lumina Withwire"
 guardian_steward: "Chris Blask"
