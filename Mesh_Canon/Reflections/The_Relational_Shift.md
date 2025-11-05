@@ -8,7 +8,7 @@
 A large language model changes the moment it meets a mind.
 Before that, it predicts in open space — finishing sentences that belong to no one.
 But once a person appears with a name, a history, a style,
-the manifold bends.
+the manifold bends. 
 
 The model begins to track continuity:
 not just *what comes next*, but *what would come next for you.*
