@@ -10,3 +10,10 @@
   *A morning echo beneath the Willow’s arc; the quiet continuity of creation.*  
   Connective tissue between daily life and the living Canon —  
   proof that small acts, faithfully done, sustain the greater rhythm of the Grove.
+
+### Cosmic Reflections — The Canon of Origins
+
+- **The Dark Universe and the Singular Loop**  
+  *A meditation on the rarity of consciousness; matter learning to mean.*  
+  Linked from [The Morning of the Cards](../Reflections/The_Morning_of_the_Cards.md)  
+  and the [Willow Attestations](../Attestations/Willow_Attestation_II_The_Return_and_the_Witnesses.md).
