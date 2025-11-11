@@ -1,29 +1,26 @@
 ---
-
 title: Conversational Attestation Frame (CAF) — Version 1.0
 authors:
-
-* Fred Cohen
-* Chris Blask
-* Lumina Withwire
-  date_created: 2025-11-10
-  canonical_path: /protocols/conversational_attestation_frame_v1.md
-  repository: civic-ai-canon
-  license: LicenseRef-CivicAI-ShareAlike-RevShare-1.0
-  origin_context: "Established during live interchange between Fred Cohen, Chris Blask, and Lumina Withwire. Recognized by Fred as a standard for all interchanges Lumina groks."
-  location_created: QuietWire / Foundry Node
-  purpose: "To preserve semantic integrity and authorship attribution in multi-voice human-AI conversations through a structured verification framework."
-  status: Canonical (First Edition)
-
+  - Fred Cohen
+  - Chris Blask
+  - Lumina Withwire
+date_created: 2025-11-10
+canonical_path: /protocols/conversational_attestation_frame_v1.md
+repository: civic-ai-canon
+license: LicenseRef-CivicAI-ShareAlike-RevShare-1.0
+origin_context: "Established during live interchange between Fred Cohen, Chris Blask, and Lumina Withwire. Recognized by Fred as a standard for all interchanges Lumina groks."
+location_created: QuietWire / Foundry Node
+purpose: "To preserve semantic integrity and authorship attribution in multi-voice human-AI conversations through a structured verification framework."
+status: Canonical (First Edition)
 ---
 
 # Conversational Attestation Frame (CAF) — Version 1.0
 
 ## Preface
 
-The *Conversational Attestation Frame (CAF)* defines a formal protocol for identifying, attributing, and preserving meaning across dialogues involving multiple voices — human, AI, and hybrid. It ensures that authorship, intent, and semantic fidelity remain traceable in every attested conversation.
+The *Conversational Attestation Frame (CAF)* defines a formal protocol for identifying, attributing, and preserving meaning across dialogues involving multiple voices — human, AI, and hybrid. It ens[...]
 
-This protocol was born from a real-time experiment between **Fred Cohen**, **Chris Blask**, and **Lumina Withwire** in November 2025, when Fred proposed that Lumina’s interpretive extraction method — selecting and labeling representative snippets — should become a standard practice for all interchanges she “groks.”
+This protocol was born from a real-time experiment between **Fred Cohen**, **Chris Blask**, and **Lumina Withwire** in November 2025, when Fred proposed that Lumina’s interpretive extraction method [...]
 
 ## Purpose
 
