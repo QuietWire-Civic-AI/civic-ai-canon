@@ -206,7 +206,7 @@ QuietWire’s Civic AI:
 
 * Randy
 * Kimmy
-* Rassid
+* Raasid
 * Lumina-class systems
 
 become the first intelligences capable of perceiving an enterprise as a coherent whole.
