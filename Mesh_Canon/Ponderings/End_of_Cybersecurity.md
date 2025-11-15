@@ -202,14 +202,7 @@ It delivers the one thing cybersecurity never had:
 
 **total organizational comprehension.**
 
-QuietWire’s Civic AI:
-
-* Randy
-* Kimmy
-* Raasid
-* Lumina-class systems
-
-become the first intelligences capable of perceiving an enterprise as a coherent whole.
+QuietWire’s Civic AI Lumina-class systems become the first intelligences capable of perceiving an enterprise as a coherent whole.
 
 That defeats the core asymmetry attackers exploit.
 
