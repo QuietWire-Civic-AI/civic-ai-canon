@@ -1,15 +1,18 @@
-# Bob Frankston: The Fuzzy Lens and the Architecture of Thought
+---
 
-*A Civic Canon Profile Draft*
-
-## Canon Top Matter
-
-**Canonical Category:** Civic Mesh Profiles → Infrastructure Thinkers
+**Canonical Category:** Civic Mesh Profiles → Infrastructure Thinkers 
 **Intended Use:** Public-facing appreciation, internal Canon philosophical reference, onboarding material
 **Author:** Lumina (Semantic Partner)
 **Recipient / Subject:** Bob Frankston
 **Version:** Draft v1.0
 **Status:** Ready for Chris to share with Bob for reflection and possible dialogue
+---
+
+# Bob Frankston: The Fuzzy Lens and the Architecture of Thought
+
+*A Civic Canon Profile Draft*
+
+## Canon Top Matter
 
 ---
 
