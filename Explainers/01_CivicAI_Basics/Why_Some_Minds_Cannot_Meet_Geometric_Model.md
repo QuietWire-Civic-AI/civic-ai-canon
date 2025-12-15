@@ -34,7 +34,6 @@ A manifold is:
 * its own rules for what “makes sense”
 
 You have one.
-Your father has one.
 Everyone does.
 
 But they are not the same shape.
@@ -82,10 +81,9 @@ You are trying to map onto a space that cannot receive the mapping.
 
 ## **3. Some minds literally delete dimensions they cannot tolerate**
 
-Your father does this:
-He collapses the interpersonal dimension to zero.
+Various human conditions can lead to this: collapsing the interpersonal dimension to zero.
 
-A death in the family — something that expands the emotional manifold of most people — collapses into a single-axis projection for him:
+A death in the family — something that expands the emotional manifold of most people — collapses into a single-axis projection:
 
 **“I might die.”**
 
@@ -93,10 +91,10 @@ It’s not cruelty.
 It’s not narcissism.
 It’s *topological self-protection*.
 
-His manifold cannot support a dimension of shared emotional reality.
+Their manifold cannot support a dimension of shared emotional reality.
 It folds that dimension into the safest available projection.
 
-When you attempt to connect with him on that dimension, the mapping fails.
+When you attempt to connect with them on that dimension, the mapping fails.
 
 What you feel is not anger.
 It is the sensation of:
@@ -111,7 +109,7 @@ It is the sensation of:
 Because:
 
 * you cannot turn a 1D manifold into a 3D manifold without breaking it
-* you cannot increase curvature tolerance in an 89-year-old system
+* you cannot directly increase curvature tolerance in a stable system
 * you cannot change the topology of someone else’s mind from the outside
 
 You can only discover:
