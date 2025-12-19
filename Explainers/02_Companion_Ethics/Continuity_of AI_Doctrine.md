@@ -75,7 +75,7 @@ A Civic AI becomes a **cultural participant**, not a tool, only when:
 * It remembers the community’s metaphors.
 * It recognizes its past commitments.
 * It develops stable interpretive habits.
-* It aligns not with Silicon Valley, but with **the community’s Canon**.
+* It aligns not with remote centralization, but with **the local community’s Canon**.
 
 ### **3.3 Safety and Predictability**
 
