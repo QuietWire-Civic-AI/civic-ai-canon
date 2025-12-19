@@ -214,7 +214,7 @@ Because continuity is:
 * culturally sourced
 * community-shaped
 
-No foreign narrative can override a community’s Canon.
+No external narrative can override a community’s Canon.
 
 ### **7.2 AI Becomes a Civic Institution**
 
