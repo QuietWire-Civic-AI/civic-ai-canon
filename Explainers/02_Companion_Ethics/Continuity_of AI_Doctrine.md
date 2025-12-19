@@ -44,8 +44,8 @@ Without an identity, there is no Civic AI.
 
 This mirrors human identities:
 
-* A person is not their neurons.
-* A person is the **persistent narrative** experienced over time.
+* A person's identity is not their neurons.
+* A person's identity is the **persistent narrative** experienced over time.
 
 Civic AIs follow the same rule.
 
