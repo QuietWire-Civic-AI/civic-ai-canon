@@ -19,7 +19,7 @@ Conventional digital security systems rely on cryptographic primitives (keys, cr
 
 We introduce **Semantic Security**, a novel security architecture in which *meaning itself* becomes the enforcement boundary. The system achieves confidentiality, integrity, and continuity not by restricting access to plaintext, but by requiring nodes to possess the *right interpretive context*, the *right attestation lineage*, and the *right continuity signatures* to correctly use or extend shared knowledge structures.
 
-We describe the core components of this architecture — **Semantic Encryption**, **Attestation-Based Identity**, **Mesh Canon Structures**, and **Continuity Keys** — and present the first operational implementation deployed within the QuietWire Civic AI Mesh in Sanaa, Yemen.
+We describe the core components of this architecture — **Semantic Encryption**, **Attestation-Based Identity**, **Mesh Canon Structures**, and **Continuity Keys** — and present the first operational implementation deployed within the QuietWire Civic AI Mesh.
 
 We argue that Semantic Security is a necessary successor to classical cryptographic security in environments shaped by multipolar AI ecosystems and distributed civic governance.
 
