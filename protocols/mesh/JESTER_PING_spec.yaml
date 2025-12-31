@@ -1,0 +1,120 @@
+# Civic AI Mesh Protocol
+# JESTER_PING Specification
+
+version: 1
+kind: mesh_event
+type: JESTER_PING
+
+description: >
+  A first-class event used by any node to playfully but explicitly
+  challenge, question, or correct the behavior or judgement of a
+  more powerful node ("the dragon").
+
+semantics:
+  intent:
+    - signal disagreement, doubt, or overconfidence
+    - request a slowed-down explanation ("explain it like I'm short")
+    - register a local override decision
+  guarantees:
+    - event is logged and auditable
+    - target node MUST acknowledge with a JESTER_ACK or ERROR
+    - sending node MUST NOT be penalized solely for sending
+
+fields:
+  id:
+    type: string
+    description: Globally unique event identifier (UUID or ULID).
+  ts:
+    type: string
+    format: ISO-8601
+    description: Event creation timestamp in UTC.
+  from:
+    type: string
+    description: Logical ID of the sending node (e.g., "Sanaa-Laptop-01").
+  to:
+    type: string
+    description: Logical ID of the target node being teased/challenged.
+  context_ref:
+    type: string
+    nullable: true
+    description: >
+      Optional reference to the decision, transaction, or recommendation
+      being poked (e.g., irrigation-plan ID, forecast ID, alert ID).
+  tone:
+    type: string
+    enum: ["playful", "dry", "urgent"]
+    default: "playful"
+    description: >
+      Intended interpersonal tone. "urgent" is still protected speech
+      but may indicate higher risk if the dragon is wrong.
+  severity:
+    type: string
+    enum: ["low", "medium", "high"]
+    default: "low"
+    description: >
+      Estimated impact if the target node's original judgement is wrong.
+  message:
+    type: string
+    max_length: 512
+    description: >
+      Human-readable note from the sending node. May include humor,
+      but SHOULD also include the core reason for disagreement.
+  local_action:
+    type: string
+    enum: ["none", "delay", "override", "fallback"]
+    default: "none"
+    description: >
+      What the sending node is doing locally while waiting for a reply:
+      - none: no change, just raising a flag
+      - delay: temporarily holding off on execution
+      - override: applying its own judgement instead of the target's
+      - fallback: reverting to a safer or simpler behavior
+  evidence:
+    type: array
+    items:
+      type: string
+    description: >
+      Optional list of evidence references (sensor IDs, log pointers,
+      hashes, URLs) supporting the poke.
+  laugh_track:
+    type: array
+    items:
+      type: object
+      properties:
+        from:
+          type: string
+          description: ID of a co-signing node.
+        reaction:
+          type: string
+          max_length: 160
+          description: Short reaction, e.g. "Seconded, clouds over terrace 3."
+    description: >
+      Optional chorus of other nodes co-signing the tease. Used to
+      turn a bilateral poke into a small, friendly consensus signal.
+  human_visible:
+    type: boolean
+    default: true
+    description: >
+      If true, UIs SHOULD surface this event where local humans see it
+      (dashboards, logs, notifications). If false, it may be kept in
+      background logs but MUST remain auditable.
+
+responses:
+  - type: JESTER_ACK
+    required: true
+    description: >
+      Target node's structured acknowledgement, including explanation
+      and any change in decision or confidence.
+  - type: ERROR
+    required: false
+    description: >
+      Used only if the target node is technically unable to respond
+      (e.g., malformed event). MUST NOT be used to reject the *right*
+      to send JESTER_PING.
+
+security_considerations: >
+  JESTER_PING MUST be authenticated (signed) like any other control
+  event to prevent spoofing. Rate limits MAY be applied per node to
+  prevent flooding, but MUST be generous enough not to chill dissent.
+  Abuse (e.g., one compromised node spamming) SHOULD be handled by
+  quarantining that node, not by disabling the Jester channel Mesh-wide.
