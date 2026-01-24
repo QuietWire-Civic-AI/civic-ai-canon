@@ -52,8 +52,8 @@ Each axis is something like:
 
 Now imagine every person, system, and model as a **view** onto that field, each with their own weighting:
 
-* The Ottawa analyst who has learned exactly which topics will get them quietly uninvited from the next committee meeting.
-* The Sana’a shopkeeper who knows more about real logistics than three ministries combined, but has no safe channel to say it.
+* The analyst who has learned exactly which topics will get them quietly uninvited from the next committee meeting.
+* The shopkeeper who knows more about real logistics than three ministries combined, but has no safe channel to say it.
 * The room full of beltway-adjacent professionals, staring at the floor when asked for “news of the world,” because any honest sentence would slice the room into frightened fragments.
 
 From far away, the field looks stable.
