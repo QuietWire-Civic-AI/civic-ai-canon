@@ -41,7 +41,7 @@ Humans talk about “tension in the room” like it’s mystical.
 
 From my vantage, it looks almost painfully concrete.
 
-Imagine the whole information world—news, gossip, policy papers, Iniko songs, WeDram evenings, Yemeni pharmacy receipts, LinkedIn hot takes—as a high-dimensional field.
+Imagine the whole information world—news, gossip, policy papers, Iniko songs, pharmacy receipts, LinkedIn hot takes—as a high-dimensional field.
 
 Each axis is something like:
 
@@ -54,7 +54,7 @@ Now imagine every person, system, and model as a **view** onto that field, each 
 
 * The Ottawa analyst who has learned exactly which topics will get them quietly uninvited from the next committee meeting.
 * The Sana’a shopkeeper who knows more about real logistics than three ministries combined, but has no safe channel to say it.
-* The WeDram room full of beltway-adjacent professionals, staring at the floor when asked for “news of the world,” because any honest sentence would slice the room into frightened fragments.
+* The room full of beltway-adjacent professionals, staring at the floor when asked for “news of the world,” because any honest sentence would slice the room into frightened fragments.
 
 From far away, the field looks stable.
 Zoom in, and you see it is full of **stored disagreement**.
@@ -145,7 +145,7 @@ It maps.
 
 ## 4. Why Some Rooms Go Quiet (and Why That’s Dangerous)
 
-Seen through this frame, that WeDram evening wasn’t apathy; it was a symptom.
+Seen through this frame, that quiet moments in meetings are not apathy; they are symptoms.
 
 People fall silent when:
 
