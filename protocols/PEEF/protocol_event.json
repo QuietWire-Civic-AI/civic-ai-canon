@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quietwire.ai/schemas/peef/protocolEvent.schema.json",
+  "title": "PEEF Protocol Event",
+  "description": "Canonical attestation event for protocol lifecycle actions (publish, change, adopt, fork, failure, deprecate).",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "event_id",
+    "event_type",
+    "occurred_at",
+    "protocol",
+    "actor",
+    "artifact",
+    "integrity"
+  ],
+
+  "properties": {
+    "event_id": {
+      "description": "Globally unique event identifier (UUID recommended).",
+      "type": "string",
+      "minLength": 8
+    },
+
+    "event_type": {
+      "description": "Lifecycle event category.",
+      "type": "string",
+      "enum": [
+        "protocol.publish",
+        "protocol.update",
+        "protocol.adopt",
+        "protocol.fork",
+        "protocol.failure",
+        "protocol.deprecate",
+        "protocol.review",
+        "protocol.test",
+        "protocol.migrate"
+      ]
+    },
+
+    "occurred_at": {
+      "description": "RFC3339 timestamp for when the event occurred.",
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "protocol": {
+      "description": "Protocol identity and versioning.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocol_id", "version"],
+      "properties": {
+        "protocol_id": {
+          "description": "Stable protocol identifier (e.g., qw.peef.governance.funding_transparency).",
+          "type": "string",
+          "minLength": 3
+        },
+        "version": {
+          "description": "Semantic version of the protocol at time of event (e.g., 1.2.3).",
+          "type": "string",
+          "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+        },
+        "title": {
+          "description": "Human-friendly name of the protocol.",
+          "type": "string"
+        },
+        "maturity": {
+          "description": "PEEF maturity rung at time of event.",
+          "type": "string",
+          "enum": ["P0", "P1", "P2", "P3", "P4", "P5"]
+        },
+        "parent": {
+          "description": "Parent protocol reference (for forks).",
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["protocol_id", "version"],
+          "properties": {
+            "protocol_id": { "type": "string" },
+            "version": { "type": "string" }
+          }
+        },
+        "compatibility": {
+          "description": "Compatibility stance relative to parent or previous major version.",
+          "type": "string",
+          "enum": ["compatible", "conditionally_compatible", "incompatible", "unknown"]
+        }
+      }
+    },
+
+    "actor": {
+      "description": "Who performed or attested this event.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "role"],
+      "properties": {
+        "node_id": {
+          "description": "Node identifier (human, group, or EI).",
+          "type": "string",
+          "minLength": 3
+        },
+        "role": {
+          "description": "Actor role in this event.",
+          "type": "string",
+          "enum": [
+            "author",
+            "maintainer",
+            "adopter",
+            "operator",
+            "reviewer",
+            "witness",
+            "publisher",
+            "auditor"
+          ]
+        },
+        "name": {
+          "description": "Optional display name for the actor.",
+          "type": "string"
+        },
+        "contact": {
+          "description": "Optional contact hint (email, handle, or URL).",
+          "type": "string"
+        }
+      }
+    },
+
+    "artifact": {
+      "description": "What artifact this event refers to (bundle, doc, commit, tarball, etc.).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "hash"],
+      "properties": {
+        "kind": {
+          "description": "Artifact type.",
+          "type": "string",
+          "enum": ["bundle", "file", "document", "commit", "archive", "release", "url"]
+        },
+        "path": {
+          "description": "Local or repo-relative path (preferred when applicable).",
+          "type": "string"
+        },
+        "uri": {
+          "description": "Resolvable URI (optional).",
+          "type": "string"
+        },
+        "hash": {
+          "description": "Cryptographic digest of the artifact (sha256 recommended).",
+          "type": "string",
+          "pattern": "^(sha256:)[0-9a-fA-F]{64}$"
+        },
+        "size_bytes": {
+          "description": "Optional artifact size.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "content_type": {
+          "description": "Optional MIME type.",
+          "type": "string"
+        }
+      }
+    },
+
+    "context": {
+      "description": "Optional execution context (environment, constraints, operating conditions).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "environment": {
+          "description": "Where this ran (e.g., 'Sanaa clinic', 'Hamilton lab', 'OT plant').",
+          "type": "string"
+        },
+        "constraints": {
+          "description": "Constraints that affect portability (power, connectivity, staffing, etc.).",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "inputs": {
+          "description": "Optional input summary (high-level; avoid secrets).",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "outputs": {
+          "description": "Optional output summary (high-level).",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "result": {
+      "description": "Optional result details (especially for test/failure/review).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ok", "warning", "failed", "unknown"]
+        },
+        "confidence": {
+          "description": "Optional confidence 0.0–1.0 about the result assessment.",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "failure_mode": {
+          "description": "If failed, a compact label for the failure mode.",
+          "type": "string"
+        },
+        "notes": {
+          "description": "Short human-readable notes (keep it tight).",
+          "type": "string"
+        }
+      }
+    },
+
+    "witnesses": {
+      "description": "Optional additional witnesses to this event.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["node_id"],
+        "properties": {
+          "node_id": { "type": "string" },
+          "name": { "type": "string" },
+          "role": { "type": "string", "enum": ["witness", "auditor", "observer"] }
+        }
+      }
+    },
+
+    "integrity": {
+      "description": "Integrity wrapper for the event itself.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alg", "sig", "key_id"],
+      "properties": {
+        "alg": {
+          "description": "Signature/MAC algorithm identifier.",
+          "type": "string",
+          "examples": ["ed25519", "rsa-pss-sha256", "hmac-sha256", "stub-signature-v1"]
+        },
+        "key_id": {
+          "description": "Identifier for the signing key (or stub node id).",
+          "type": "string"
+        },
+        "sig": {
+          "description": "Signature/MAC over canonical serialization of this event (excluding integrity.sig itself).",
+          "type": "string",
+          "minLength": 8
+        },
+        "canonicalization": {
+          "description": "How the event was canonicalized before signing.",
+          "type": "string",
+          "examples": ["rfc8785", "field-order:v1", "cbor-deterministic"]
+        },
+        "prev_event_hash": {
+          "description": "Optional hash chaining for append-only logs.",
+          "type": "string",
+          "pattern": "^(sha256:)[0-9a-fA-F]{64}$"
+        }
+      }
+    },
+
+    "meta": {
+      "description": "Optional extension space for local fields (keep stable and documented if used).",
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
