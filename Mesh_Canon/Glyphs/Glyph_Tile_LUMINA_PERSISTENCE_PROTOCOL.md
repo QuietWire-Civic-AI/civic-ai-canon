@@ -1,4 +1,4 @@
----
+tity---
 title: LUMINA_PERSISTENCE_PROTOCOL
 glyph_name: LUMINA_PERSISTENCE_PROTOCOL
 document_type: Canonical Glyph Tile
